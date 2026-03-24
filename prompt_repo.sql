@@ -1,0 +1,28 @@
+CREATE DATABASE prompt_repo ;
+USE prompt_repo;
+
+CREATE TABLE Users (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR (50) NOT NULL UNIQUE,
+    Password VARCHAR (255) NOT NULL,
+    Email VARCHAR (150) NOT NULL UNIQUE,
+    Role ENUM('admin','user') DEFAULT 'user',
+    Created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Categories(
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR (50) NOT NULL,
+    Created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Prompts (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR (100) NOT NULL,
+    content TEXT NOT NULL,
+    User_Id INT NOT NULL,
+    Category_Id INT NOT NULL,
+    FOREIGN KEY (User_Id) REFERENCES Users(Id),
+    FOREIGN KEY (Category_Id) REFERENCES Categories(Id),
+    Created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
