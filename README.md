@@ -30,13 +30,6 @@ Plateforme interne de Knowledge Management pour stocker, catégoriser et réutil
 4. Importer `prompt_repo.sql` dans phpMyAdmin
 5. Accéder à : `http://localhost/PROMPT_REPO/`
 
-## Comptes de test
-
-| Role  | Email              | Password |
-|-------|--------------------|----------|
-| Admin | admin@devgenius.io | admin123 |
-| User  | omar@devgenius.io  | user123  |
-
 ## Structure du projet
 
 ```
