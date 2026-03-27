@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST' && isset($_POST['add'])){
 
 //Modifier
 if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['edit'])){
-      $category->id = $_POST['id'];
+    $category->id = $_POST['id'];
     $category->title = $_POST['title'];
     $category->update();
     header("Location:categories.php");
