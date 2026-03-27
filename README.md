@@ -5,7 +5,7 @@ Plateforme interne de Knowledge Management pour stocker, catégoriser et réutil
 ## Technos utilisées
 
 - **Backend** : PHP 8 (OOP)
-- **Database** : MySQL / MariaDB
+- **Database** : MySQL
 - **Frontend** : HTML, CSS (Dark Theme)
 - **Serveur** : Apache (XAMPP)
 

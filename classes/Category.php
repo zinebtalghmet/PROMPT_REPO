@@ -33,10 +33,14 @@ class Category{
     }
 
     public function delete(){
-        $query = "DELETE FROM " . $this->table . " WHERE Id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id",$this->id);
-        return $stmt->execute();
+        try {
+            $query = "DELETE FROM " . $this->table . " WHERE Id = :id";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":id",$this->id);
+            return $stmt->execute();
+        } catch(PDOException $e){
+            return false;
+        }
     }
 }   
 
