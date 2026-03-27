@@ -59,7 +59,11 @@ PROMPT_REPO/
 ├── prompt_repo.sql           # Script SQL + seed data
 └── README.md
 ```
-
+## Sreenshots:
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
 ## Auteur
 
 Zineb Talghmet - DevGenius Solutions
